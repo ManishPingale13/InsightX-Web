@@ -62,12 +62,13 @@ def predict(request):
     tool_wear = body["tool_wear"]
     quality = body["quality"]
     machine_name = body["machine_name"]
+    model = body["model"]
 
     list = [[air_temp, process_temp,
              rotational_speed, torque,
              tool_wear, quality]]
 
-    preds = Interface.predict(list)
+    preds = Interface.predict(list,model)
 
     # Auth
     user = body["user"]
