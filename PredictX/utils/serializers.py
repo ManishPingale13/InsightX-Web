@@ -33,6 +33,6 @@ def records_serializer(data):
         "tool_wear": data.tool_wear,
         "quality": data.quality,
         "predictions": data.predictions,
-        "status": obj.status
+        "status": data.status
     }
     return serialized_obj
